@@ -176,20 +176,19 @@ void excluirPrimeiroElemento()
 	if (primeiro == ultimo) {
 		primeiro = NULL;
 		ultimo = NULL;
+		free(aux);
 		cout << "excluido" << endl;
 		return;
 	}
 
 
-	while (aux != NULL) {
-		if (aux->ant == NULL) {
-			primeiro = aux->prox;
-			primeiro->ant = NULL;
-		}
+	if (aux->ant == NULL) {
+		primeiro = aux->prox;
+		primeiro->ant = NULL;
 		cout << "excluido" << endl;
 		free(aux);
-		break;
 	}
+		
 }
 
 void excluirUltimoElemento()
@@ -204,19 +203,18 @@ void excluirUltimoElemento()
 	if (primeiro == ultimo) {
 		primeiro = NULL;
 		ultimo = NULL;
+		free(aux);
 		cout << "excluido" << endl;
 		return;
 	}
 
-	while (aux != NULL) {
-		if (aux->prox == NULL) {
-			ultimo = aux->ant;
-			ultimo->prox = NULL;
-		}
+	if (aux->prox == NULL) {
+		ultimo = aux->ant;
+		ultimo->prox = NULL;
 		cout << "excluido" << endl;
 		free(aux);
-		break;
 	}
+		
 }
 
 
