@@ -181,14 +181,12 @@ void excluirPrimeiroElemento()
 		return;
 	}
 
-
 	if (aux->ant == NULL) {
 		primeiro = aux->prox;
 		primeiro->ant = NULL;
-		cout << "excluido" << endl;
 		free(aux);
-	}
-		
+		cout << "excluido" << endl;
+	}		
 }
 
 void excluirUltimoElemento()
@@ -211,10 +209,9 @@ void excluirUltimoElemento()
 	if (aux->prox == NULL) {
 		ultimo = aux->ant;
 		ultimo->prox = NULL;
-		cout << "excluido" << endl;
 		free(aux);
+		cout << "excluido" << endl;
 	}
-		
 }
 
 
